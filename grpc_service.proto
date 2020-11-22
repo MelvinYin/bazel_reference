@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package grpc_tic_tac_toe;
+
+service Tic {
+  rpc sendTic(SelectionObject) returns (Results) {};
+}
+
+message SelectionObject {
+  int32 select = 1;
+}
+
+message Results {
+  repeated int32 result = 1;
+}

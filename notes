@@ -1,0 +1,2 @@
+if bazel complain CC or gcc not found, go to /usr/lib or /usr/bin, find ./cc,
+and where it is present, sudo cp ./cc ./CC. This should work.
