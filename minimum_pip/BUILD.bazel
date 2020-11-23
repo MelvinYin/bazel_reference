@@ -1,0 +1,7 @@
+load("@my_deps//:requirements.bzl", "requirement")
+
+py_binary(
+    name = "main_func",
+    srcs = [":main_func.py"],
+    deps=[requirement("numpy"),]
+)

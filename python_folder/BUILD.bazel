@@ -14,6 +14,13 @@ py_library(
                 "//visibility:public",
             ],
 )
+py_library(
+    name = "tes123",
+    srcs = [":tes123.py"],
+        visibility = [
+                "//visibility:public",
+            ],
+)
 
 py_library(
     name = "pserver",
