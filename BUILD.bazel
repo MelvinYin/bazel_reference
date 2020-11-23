@@ -1,37 +1,10 @@
+load(":execute.bzl", "execute")
+load(":library.bzl", "runfiles_binary", "runfiles_library")
+load("@rules_proto_grpc//python:defs.bzl", "python_grpc_library")
 load("@rules_proto_grpc//python:defs.bzl", "python_grpc_library")
 load("@rules_proto_grpc//python:defs.bzl", "python_grpc_compile")
 load("@grpc_python_dependencies//:requirements.bzl", "requirement")
 load("@rules_proto//proto:defs.bzl", "proto_library")
 load("@com_github_grpc_grpc//bazel:python_rules.bzl", "py_grpc_library",
 "py_proto_library")
-
-py_binary(
-    name = "pclient",
-    srcs = [":pclient.py"],
-    deps = [":python_grpc_library"]
-)
-
-py_binary(
-    name = "pserver",
-    srcs = [":pserver.py"],
-    deps = [":python_grpc_library", "@com_github_grpc_grpc//src/python/grpcio/grpc:grpcio"],
-
-)
-
-proto_library(
-    name = "thing_proto",
-    srcs = ["grpc_service.proto"],
-    deps = ["@com_google_protobuf//:any_proto"],
-        visibility = [
-                "//visibility:public",
-            ],
-)
-
-python_grpc_library(
-    name = "python_grpc_library",
-    deps = [":thing_proto"],
-    visibility = [
-            "//visibility:public",
-        ],
-)
 

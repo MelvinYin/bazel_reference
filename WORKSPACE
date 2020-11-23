@@ -11,7 +11,8 @@ http_archive(
         "https://github.com/bazelbuild/rules_proto/archive/97d8af4dc474595af3900dd85cb3a29ad28cc313.tar.gz",
     ],
 )
-load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_proto_toolchains")
+load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies",
+"rules_proto_toolchains")
 rules_proto_dependencies()
 rules_proto_toolchains()
 
@@ -50,6 +51,12 @@ rules_proto_toolchains()
 load("@rules_proto_grpc//python:repositories.bzl", rules_proto_grpc_python_repos="python_repos")
 
 rules_proto_grpc_python_repos()
+
+
+load("@rules_proto_grpc//java:repositories.bzl",
+rules_proto_grpc_java_repos="java_repos")
+
+rules_proto_grpc_java_repos()
 
 load("@com_github_grpc_grpc//bazel:grpc_deps.bzl", "grpc_deps")
 

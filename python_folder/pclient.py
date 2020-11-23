@@ -1,4 +1,4 @@
-from python_grpc_library_pb import grpc_service_pb2, grpc_service_pb2_grpc
+import grpc_service_pb2, grpc_service_pb2_grpc
 import grpc
 
 def ping(portno):
