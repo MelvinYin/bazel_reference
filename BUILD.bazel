@@ -8,3 +8,9 @@ load("@rules_proto//proto:defs.bzl", "proto_library")
 load("@com_github_grpc_grpc//bazel:python_rules.bzl", "py_grpc_library",
 "py_proto_library")
 
+py_binary(
+    name = "p_server",
+    srcs = [":p_server.py"],
+    deps = ["//python_folder:pserver"],
+    imports=['']
+)

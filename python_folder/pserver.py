@@ -1,5 +1,23 @@
 import os
-from python_folder import grpc_service_pb2, grpc_service_pb2_grpc
+import python_folder
+import os
+
+ROOT = os.path.dirname(__file__)
+print(ROOT)
+# print(os.listdir(os.path.join(ROOT, "pserver")))
+print(os.listdir(os.path.join(ROOT, "python_grpc_library_pb", "python_folder")))
+
+import pkgutil
+for _, name, _ in pkgutil.iter_modules(['python_folder.python_grpc_library_pb']):
+    print(name)
+print("\n\n\n")
+# from python_folder import python_grpc_library_pb
+
+# print(dir(python_grpc_library_pb))
+import python_folder.python_grpc_library_pb
+
+from python_folder.python_grpc_library_pb.python_folder import grpc_service_pb2, \
+    grpc_service_pb2_grpc
 import grpc
 from concurrent import futures
 
