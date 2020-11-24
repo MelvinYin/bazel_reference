@@ -15,7 +15,7 @@ py_binary(
             ],
 )
 
-py_library(
+py_binary(
     name = "pserver",
     srcs = [":pserver.py"],
     deps = [":python_grpc_library"],
