@@ -1,5 +1,6 @@
-from python_folder import grpc_service_pb2, grpc_service_pb2_grpc
 import grpc
+
+from python_folder import grpc_service_pb2, grpc_service_pb2_grpc
 
 def ping(portno):
     print(f"AdminPage.ping called.")
@@ -12,6 +13,5 @@ def ping(portno):
             print(term)
         print(return_object)
     print(f"AdminPage.ping completed.\n")
-
 
 ping(8012)

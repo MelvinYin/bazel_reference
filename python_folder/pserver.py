@@ -10,7 +10,6 @@ class Server(grpc_service_pb2_grpc.TicServicer):
         context.set_code(grpc.StatusCode.OK)
         return returned
 
-
 def start_server():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=1),
                          maximum_concurrent_rpcs=1)
@@ -19,6 +18,5 @@ def start_server():
     actual_port = server.add_insecure_port(address)
     server.start()
     server.wait_for_termination()
-
 
 start_server()

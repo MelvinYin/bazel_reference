@@ -1,6 +1,5 @@
-load("@rules_proto_grpc//python:defs.bzl", "python_grpc_library")
-load("@rules_proto_grpc//python:defs.bzl", "python_grpc_library")
-load("@rules_proto_grpc//python:defs.bzl", "python_grpc_compile")
+load("@rules_proto_grpc//python:defs.bzl", "python_grpc_library",
+"python_grpc_compile")
 load("@grpc_python_dependencies//:requirements.bzl", "requirement")
 load("@rules_proto//proto:defs.bzl", "proto_library")
 load("@com_github_grpc_grpc//bazel:python_rules.bzl", "py_grpc_library",

@@ -3,3 +3,7 @@ and where it is present, sudo cp ./cc ./CC. This should work.
 
 If for some reason in python import grpc_service_pb2 doesn't work, try from
 python_grpc_service_pbs import grpc_service_pb2. Idk why.
+
+Other commands:
+load(":execute.bzl", "execute")
+load(":library.bzl", "runfiles_binary", "runfiles_library")
