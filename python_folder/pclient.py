@@ -1,6 +1,7 @@
 import grpc_service_pb2, grpc_service_pb2_grpc
 import grpc
 
+
 def ping(portno):
     print(f"AdminPage.ping called.")
     with grpc.insecure_channel(f'localhost:{portno}') as channel:
@@ -12,5 +13,6 @@ def ping(portno):
             print(term)
         print(return_object)
     print(f"AdminPage.ping completed.\n")
+
 
 ping(8012)

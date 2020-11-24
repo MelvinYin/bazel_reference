@@ -6,17 +6,10 @@ load("@rules_proto//proto:defs.bzl", "proto_library")
 load("@com_github_grpc_grpc//bazel:python_rules.bzl", "py_grpc_library",
 "py_proto_library")
 
-py_library(
+py_binary(
     name = "pclient",
     srcs = [":pclient.py"],
     deps = [":python_grpc_library"],
-        visibility = [
-                "//visibility:public",
-            ],
-)
-py_library(
-    name = "tes123",
-    srcs = [":tes123.py"],
         visibility = [
                 "//visibility:public",
             ],
